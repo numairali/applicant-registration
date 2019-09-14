@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.numair.applicant",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.0.0",
+    "applicationType": "monolith",
+    "baseName": "ApplicantRegistration",
+    "packageName": "com.numair.applicant",
+    "packageFolder": "com/numair/applicant",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzJhN2Y1MWJjNzQ0MzBjZjRmYTUwYjYxZjlhNDhkNTJkMGZlMzVhMDJiOTgwOWEzZTdlMmU5MmJhYmE3MTdjYWI1MzJkY2QxNmM4YmE0NzBmNDcxOWZlODc5ZTEwY2JkZGQ1NmJkNTE2Zjg2YzQzYzM5MDA1MGQ1ZWY4NTVhNjg=",
+    "clientFramework": "angularX",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "dark",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "fr"]
+  }
+}
