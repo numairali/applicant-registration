@@ -6,7 +6,7 @@ logging:
 
 spring:
   profiles:
-    active: dev
+    active: staging
     include:
       - swagger
       # Uncomment to activate TLS for the dev profile
