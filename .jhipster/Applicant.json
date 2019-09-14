@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "first_name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "2",
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "last_name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "2",
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "phone_number",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "10",
+            "fieldValidateRulesMaxlength": "10"
+        }
+    ],
+    "changelogDate": "20190914022723",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "applicant",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": true,
+    "pagination": "pagination"
+}

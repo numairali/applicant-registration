@@ -1,0 +1,24 @@
+{
+  "applicantRegistrationApp": {
+    "applicant": {
+      "home": {
+        "title": "Applicants",
+        "createLabel": "Créer un nouveau Applicant",
+        "createOrEditLabel": "Créer ou éditer un Applicant"
+      },
+      "created": "Un nouveau Applicant a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Applicant avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Applicant avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Applicant {{ id }} ?"
+      },
+      "detail": {
+        "title": "Applicant"
+      },
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "phone_number": "Phone Number"
+    }
+  }
+}

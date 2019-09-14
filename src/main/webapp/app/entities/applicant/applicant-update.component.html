@@ -1,0 +1,92 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-applicant-heading" jhiTranslate="applicantRegistrationApp.applicant.home.createOrEditLabel">Create or edit a Applicant</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!applicant.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="applicantRegistrationApp.applicant.first_name" for="field_first_name">First Name</label>
+                    <input type="text" class="form-control" name="first_name" id="field_first_name"
+                           formControlName="first_name"/>
+                    <div *ngIf="editForm.get('first_name').invalid && (editForm.get('first_name').dirty || editForm.get('first_name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('first_name').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('first_name').errors.minlength" jhiTranslate="entity.validation.minlength" [translateValues]="{ min: 2 }">
+                        This field is required to be at least 2 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('first_name').errors.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 50 }">
+                        This field cannot be longer than 50 characters.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="applicantRegistrationApp.applicant.last_name" for="field_last_name">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" id="field_last_name"
+                           formControlName="last_name"/>
+                    <div *ngIf="editForm.get('last_name').invalid && (editForm.get('last_name').dirty || editForm.get('last_name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('last_name').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('last_name').errors.minlength" jhiTranslate="entity.validation.minlength" [translateValues]="{ min: 2 }">
+                        This field is required to be at least 2 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('last_name').errors.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 50 }">
+                        This field cannot be longer than 50 characters.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="applicantRegistrationApp.applicant.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                    <div *ngIf="editForm.get('email').invalid && (editForm.get('email').dirty || editForm.get('email').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('email').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="applicantRegistrationApp.applicant.phone_number" for="field_phone_number">Phone Number</label>
+                    <input type="text" class="form-control" name="phone_number" id="field_phone_number"
+                           formControlName="phone_number"/>
+                    <div *ngIf="editForm.get('phone_number').invalid && (editForm.get('phone_number').dirty || editForm.get('phone_number').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('phone_number').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('phone_number').errors.minlength" jhiTranslate="entity.validation.minlength" [translateValues]="{ min: 10 }">
+                        This field is required to be at least 10 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('phone_number').errors.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
