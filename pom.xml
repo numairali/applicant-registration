@@ -813,7 +813,7 @@
             </properties>
         </profile>
         <profile>
-            <id>swagger</id>
+            <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
